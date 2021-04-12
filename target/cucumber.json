@@ -1,0 +1,567 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-06T15:01:01.385Z",
+        "line": 10,
+        "name": "Calculate Credit Assessment Score",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1050000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The calculateCreditAssessmentScore API is called with 6, \"Sole Proprietorship\", 5 parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 54
+                },
+                {
+                  "val": "\"Sole Proprietorship\"",
+                  "offset": 57
+                },
+                {
+                  "val": "5",
+                  "offset": 80
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The credit assessment score should match 7",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 41
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_assessment_score_should_match(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:02.725Z",
+        "line": 11,
+        "name": "Calculate Credit Assessment Score",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 71000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The calculateCreditAssessmentScore API is called with 10, \"Limited Liability Company\", 8 parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 54
+                },
+                {
+                  "val": "\"Limited Liability Company\"",
+                  "offset": 58
+                },
+                {
+                  "val": "8",
+                  "offset": 87
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The credit assessment score should match 13",
+            "match": {
+              "arguments": [
+                {
+                  "val": "13",
+                  "offset": 41
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_assessment_score_should_match(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:02.839Z",
+        "line": 12,
+        "name": "Calculate Credit Assessment Score",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The calculateCreditAssessmentScore API is called with 1, \"Others\", 0 parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 54
+                },
+                {
+                  "val": "\"Others\"",
+                  "offset": 57
+                },
+                {
+                  "val": "0",
+                  "offset": 67
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The credit assessment score should match 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 41
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_assessment_score_should_match(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:02.921Z",
+        "line": 13,
+        "name": "Calculate Credit Assessment Score",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 59000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The calculateCreditAssessmentScore API is called with 202, \"Partnership\", 13 parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "202",
+                  "offset": 54
+                },
+                {
+                  "val": "\"Partnership\"",
+                  "offset": 59
+                },
+                {
+                  "val": "13",
+                  "offset": 74
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The credit assessment score should match 29",
+            "match": {
+              "arguments": [
+                {
+                  "val": "29",
+                  "offset": 41
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_assessment_score_should_match(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:03.006Z",
+        "line": 23,
+        "name": "Calculate Credit Assessment Score (Check Exception case: Invalid/ Missing argument(s))",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score-(check-exception-case:-invalid/-missing-argument(s));;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 106000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The calculateCreditAssessmentScore API is called with 6, \"\", 5 parameters and some parameters are invalid.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 54
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 57
+                },
+                {
+                  "val": "5",
+                  "offset": 61
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with_F400(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The client receives \"Validation failed for : creditServiceRequestModel.companyType  :  Company Type is mandatory\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Validation failed for : creditServiceRequestModel.companyType  :  Company Type is mandatory\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client1_receives_server_version_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:03.165Z",
+        "line": 24,
+        "name": "Calculate Credit Assessment Score (Check Exception case: Invalid/ Missing argument(s))",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score-(check-exception-case:-invalid/-missing-argument(s));;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 96000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The calculateCreditAssessmentScore API is called with -1, \"Limited Liability Company\", 8 parameters and some parameters are invalid.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-1",
+                  "offset": 54
+                },
+                {
+                  "val": "\"Limited Liability Company\"",
+                  "offset": 58
+                },
+                {
+                  "val": "8",
+                  "offset": 87
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with_F400(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The client receives \"Validation failed: Number of Employee should be larger than or equal to 1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Validation failed: Number of Employee should be larger than or equal to 1\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client1_receives_server_version_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:03.323Z",
+        "line": 25,
+        "name": "Calculate Credit Assessment Score (Check Exception case: Invalid/ Missing argument(s))",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score-(check-exception-case:-invalid/-missing-argument(s));;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The calculateCreditAssessmentScore API is called with 1, \"Others\", -1 parameters and some parameters are invalid.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 54
+                },
+                {
+                  "val": "\"Others\"",
+                  "offset": 57
+                },
+                {
+                  "val": "-1",
+                  "offset": 67
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_with_F400(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The client receives \"Validation failed: Number of years operated should be larger than or equal to 0\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Validation failed: Number of years operated should be larger than or equal to 0\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client1_receives_server_version_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:03.424Z",
+        "line": 27,
+        "name": "Calculate Credit Assessment Score (Check Exception case: User is not authenticated)",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score-(check-exception-case:-user-is-not-authenticated)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 46000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The calculateCreditAssessmentScore API is called and Token without \u0027Read\u0027 scope",
+            "match": {
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_F403()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The client1 receives status code of 403",
+            "match": {
+              "arguments": [
+                {
+                  "val": "403",
+                  "offset": 36
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_receives_status_code_of_F403(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The client1 receives \u0027Access denied.\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Access denied.\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client1_receives_server_version_body_F403(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-06T15:01:03.525Z",
+        "line": 32,
+        "name": "Calculate Credit Assessment Score (Check Exception case: User is not authorized)",
+        "description": "",
+        "id": "credit-assessment-calculator;calculate-credit-assessment-score-(check-exception-case:-user-is-not-authorized)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The calculateCreditAssessmentScore API is called without Bearer Token",
+            "match": {
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_calculateCreditAssessmentScore_API_is_called_F401()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "The client2 receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 36
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client_receives_status_code_of_F401(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "The client2 receives \"Full authentication is required to access this resource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Full authentication is required to access this resource\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.livi.coding.challenge.demo.bdd.stepdefs.CreditStepDefs.the_client1_receives_server_version_body_F401(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Credit Assessment Calculator",
+    "description": "  This is a simple credit assessment calculator feature",
+    "id": "credit-assessment-calculator",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/creditservice.feature",
+    "tags": []
+  }
+]

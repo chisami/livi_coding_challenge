@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="5 seconds" debug="false">
+
+	<property name="logPath" value="/logs" />
+	<property name="LogFile" value="livi-coding-challenge" />
+	<property name="maxRollingFiles" value="30" />
+	
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+	    <encoder>
+	      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+	    </encoder>
+  	</appender>
+
+
+	<appender name="app-log" class="ch.qos.logback.classic.AsyncAppender">
+		<appender class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<!-- daily rollover -->
+				<fileNamePattern>${logPath}/${LogFile}.%d{yyyy-MM-dd}-app.log.gz</fileNamePattern>
+		    	<maxHistory>${maxRollingFiles}</maxHistory>
+	  		</rollingPolicy>
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level [%X{userId}] %logger{36} - %msg%n</pattern>
+			</encoder>
+		</appender>
+	</appender>
+	
+	<appender name="err-log" class="ch.qos.logback.classic.AsyncAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<appender class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<!-- daily rollover -->
+				<fileNamePattern>${logPath}/${LogFile}.%d{yyyy-MM-dd}-err.log.gz</fileNamePattern>
+		    	<maxHistory>${maxRollingFiles}</maxHistory>
+	  		</rollingPolicy>
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level [%X{userId}] %logger{36} - %msg%n</pattern>
+			</encoder>			
+		</appender>
+	</appender>
+	  
+	<root level="INFO">
+		<appender-ref ref="app-log" />
+		<appender-ref ref="err-log" />
+		<appender-ref ref="console" />
+	</root>
+
+</configuration>

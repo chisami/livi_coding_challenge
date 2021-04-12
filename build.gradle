@@ -1,0 +1,103 @@
+buildscript {
+  ext {
+    springBootVersion = '2.4.4'
+  }
+  repositories {
+    mavenCentral()
+    jcenter()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'eclipse'
+
+
+group = 'com.livi.coding.challenge'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+
+tasks.withType(JavaCompile) {
+    //options.encoding = 'MS950'
+    options.compilerArgs += ['-Xlint:deprecation']
+}
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// oauth
+	implementation 'org.springframework.security.oauth:spring-security-oauth2:2.3.4.RELEASE'
+
+	implementation 'com.google.code.gson:gson'
+	compileOnly 'org.projectlombok:lombok'
+	implementation 'com.h2database:h2'
+	implementation 'com.google.guava:guava:30.1.1-jre'
+	implementation 'org.apache.commons:commons-lang3:3.9'
+	implementation 'commons-io:commons-io:2.8.0'
+	implementation 'commons-beanutils:commons-beanutils:1.9.3'	
+	implementation "io.springfox:springfox-boot-starter:3.0.0"
+    compile "io.springfox:springfox-swagger-ui:3.0.0"
+	
+	implementation "com.squareup.okhttp3:okhttp:4.10.0-RC1"
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'com.h2database:h2'
+	
+		// cucumber
+	implementation 'io.cucumber:cucumber-java:6.10.2'
+	testImplementation 'io.cucumber:cucumber-junit:6.10.2'
+	implementation 'io.cucumber:cucumber-spring:6.10.2'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', 
+            '--plugin', 'html:target/cucumber-reports.html', 
+            '--plugin', 'json:target/cucumber.json', 
+            '--glue', 'com.livi.coding.challenge.demo.bdd', 'src/test/resources/features'
+            ]
+        }
+    }
+}
